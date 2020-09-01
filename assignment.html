@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style type="text/css">
+
+		 /* Navbar */
+		 body{
+		 	margin: 0;
+		 }
+		.topbar1{
+			background-image: url("https://previews.123rf.com/images/sarahdoow/sarahdoow1306/sarahdoow130600002/20215089-unopened-flower-buds-on-a-thriving-chive-plant.jpg");
+			background: linear-gradient(to right, #00cc99 0%, #9966ff 100%);
+			color: white;
+			height: 650px;
+		}
+		.topbar2{
+			width: 80%;
+			margin-left: 10%;
+		}
+		.topbar2 a{
+			color: white;
+			text-decoration: none;
+			margin-top: 20px;
+			margin-bottom: 2px;
+			display: inline-block;
+		}
+		.brand{
+			float: left;
+			width: 23%;
+			height: 55px;
+			display: inline-block;
+		}
+		.brand a{
+			height: 30px;
+			font-size: 40px;
+			font-weight: 700;
+			font-family: serif;
+		}
+		.brandlogo{
+			float: left;
+			margin-top: 3%; 
+			margin-right: 15px;
+			width: 3%;
+			font-size: 20px;
+			display: inline-block;
+		}
+		.navcontent{
+			margin-top: 20px;
+			margin-left: 10%;
+			width: 60%;
+			display: inline-block;
+		}		
+		.navcontent a{
+			text-decoration: none;
+			color: white;
+			font-size: 15px;
+			margin-left: 20px;
+		}
+
+		.navcontent a.active{
+			text-decoration: none;
+			color: #edb83b;
+		}
+		.navcontent a:hover{
+			color: #edb83b;
+		}
+		.smallpart{
+			font-family: 'Courgette', cursive;
+			width: 20%;
+			padding-left: 42px;
+		}
+		hr { 
+		  height: 2px;
+		  display: block;
+		  margin-top: 0.5em;
+		  margin-bottom: 0.5em;
+		  border-style: inset;
+		  border: 0.5px solid rgba(183, 189, 186, 0.7);
+		} 
+		.topcontent{
+			text-align: center;
+		}
+		.topcontent input{
+			text-align: center;
+			margin-top: 1.5em;
+			margin-right: 10px;
+			border: 0.5px;
+			border-style: ridge;
+			border-radius: 5px;
+			height: 35px;
+		}
+		.btnsgroup{
+			margin-top: 0.5em;
+		}
+		.btnsgroup a{
+			text-decoration: none; 
+			color: white;
+			margin-right: 10px;
+			border: 1px solid white;
+			border-radius: 5px;
+			padding: 7px 20px;
+			background-color: transparent;
+		}
+		.btnsgroup a.active2{
+			border-color: transparent;
+			background-color: #edb83b;
+			color: white;			
+		}
+		.topcontent a:hover{
+			border-color: transparent;
+			background-color: #edb83b;
+			color: white;
+		}
+		.topcontent2{
+			font-size: 40px;
+			font-weight: 900;
+		}
+		.navbottom{
+			margin-top: 160px;
+			margin-left: 10%;
+			width: 80%;
+			height: 150px;
+			background-color: white;
+		}
+		.navbottom2{
+			padding-top: 50px;
+			width: 25%;
+			height: 100%;
+			float: left;
+			display: inline-block;
+		}
+		.navbottom2 i{
+			float: left;
+			color: #1fffec;
+			width: 25%;
+			font-size: 50px;
+		}
+		.navbottom2 svg{
+			float: left;
+			color: #1fffec;
+			width: 25%;
+			height: 50px;
+		}
+
+		.navbottom2 p{
+			width: 65%;
+			float: left;
+			text-align: left;
+			display: inline-block;
+			font-size: 25px;
+			font-weight: 600;
+			margin-bottom: 0;
+			color: black;
+		}
+
+
+		/*sidebar*/
+		.sidebar {
+		  height: 100%;
+		  width: 0;
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  background-color: #111;
+		  z-index: 55;
+		  overflow-x: hidden;
+		  transition: 0.5s;
+		  padding-top: 60px;
+		}
+
+		.sidebar a {
+		  padding: 8px 8px 8px 40px;
+		  text-decoration: none;
+		  font-size: 25px;
+		  margin-top: 15px;
+		  color: #818181;
+		  display: block;
+		  transition: 0.3s;
+		}
+
+		.sidebar a:hover {
+		  color: #f1f1f1;
+		}
+
+		.sidebar .closebtn {
+		  position: absolute;
+		  top: 0;
+		  right: 25px;
+		  font-size: 36px;
+		  margin-left: 50px;
+		}
+		.openbtn {
+		  display: none;
+		  font-size: 20px;
+		  cursor: pointer;
+		  background-color: #111;
+		  color: white;
+		  padding: 4px 10px;
+		  border: none;
+		}
+		.openbtn:hover {
+		  background-color: #444;
+		}
+
+		/*mainbody*/
+		  .carousel{
+		  	margin-top: 100px;
+		  }
+
+		  .carousel-indicators{
+		    top: 65px;
+		    bottom: auto;
+		  }
+		  .carousel-indicators li {
+		    width: 70px;
+		  }
+		  .carousel-indicators .active{
+		    background-color: #03dbfc;
+		  }
+		  .carousel-inner{
+		    text-align: center;
+		    height: 100%;
+		  }
+		  h1{
+		    margin-bottom: 50px;
+		    text-align: center;
+		  }
+		  .innerdivcon{
+		    text-align: center;
+		    margin-left: 30%;
+		    width: 40%;
+		    margin-bottom: 90px;
+		  }
+		  .maincon {
+		    height: 500px;
+		    width: 100%;
+		    margin: 0;
+		  }
+		  .maincon img{
+		    margin-right: 0;
+		    height: 49%;
+		    width: 24.6%;
+		  }
+
+
+
+		/*footer*/
+		.footerpart{
+			position: relative;
+			height: 500px;
+			background: #1f2736;
+		}
+		.foottop{
+			text-align: center;
+			z-index: 10;
+			position: absolute;
+			top: 1em;
+			opacity: 0.9;
+			background: linear-gradient(to right, #00cc99 0%, #9966ff 100%);
+			width: 80%;
+			height: 180px;
+			margin-left: 10%;
+		}
+	    .con{
+			width: 40%;
+			display: inline-block; 
+			margin-top: 60px;
+			font-size: 30px;
+			font-weight: 700;
+			color: white;
+		}
+		.con2{
+			width: 40%;
+			display: inline-block;
+		}
+		.foottop input{
+			width: 350px;
+			border: 0.5px;
+			border-style: ridge;
+			border-radius: 5px;
+			height: 40px;
+			padding-left: 10px;
+		}
+		.footinner{
+			position: absolute;
+			color: black;
+			width: 80%;
+			margin-top: 120px;
+			margin-left: 10%;
+		}
+		.footinner .footinner1{
+			margin-right: 10px;
+			float: left;
+			width: 24%;
+			display: inline-block;
+		}
+		.footinner a{
+			text-decoration: none;
+		}
+		.foothead a{
+			color: white;
+		}
+		.foothead p{
+			color: #9da19e;
+		}
+		.footcontent a{
+			color: #9da19e;
+		}
+		.footcontent a:hover{
+			color: white;
+		}
+		.footcontent p{
+			color: #9da19e;
+		}
+
+		.brandlogofoot{
+			color: white;
+			float: left;
+			margin-top: 5px;
+			font-size: 50px;
+			display: inline-block;
+			width: 20%;
+		}
+		.brandfoot{
+			width: 80%;
+			text-decoration: none;
+			display: inline-block;			
+		}
+		.brandfoot2{
+			width: 100%;
+			float: left;
+			height: 30px;
+			margin-top: 10px;
+			font-size: 30px;
+			font-weight: 700;
+			font-family: serif;	
+		}
+		.smallpart2{
+			font-size: 15px;
+			font-family: 'Courgette', cursive;
+		}
+		.footnext a{
+			margin-left: 20px;
+			display: block;
+		}
+		.footwidge .img{
+			width: 80px;
+			height: 60px;
+		}
+		.footcona a{
+			font-size: 30px;
+		}
+		@media (max-width: 1500px){
+			.navcontent{
+				margin-left: 5%;
+				width: 65%;
+			}
+		}
+		@media (max-width: 1400px){
+
+			/*navbar*/
+			.navcontent{
+				display: none;
+			}
+			.brandlogo{
+				width: 3%;
+				margin-top: 2%;
+			}
+			.brand{
+				width: 80%;
+			}
+			.brand a{
+				margin-top: 5px;
+			}
+			.smallpart{
+				width: 80%;
+			}
+			.navbottom2 p{
+				font-size: 20px;
+			}
+			/*sidebar*/
+			.openbtn{
+				float: right;
+				font-size: 50px;
+				background-color: transparent;
+				display: inline-block;
+			}
+			.openbtn:hover{
+				background-color: transparent;
+			}
+
+			/*mainbody*/
+			.maincon {
+			    height: 400px;
+			    width: 100%;
+			    margin: 0;
+		  	}
+
+			/*footer*/
+			.footerpart{
+				height: 600px;
+			}
+			.footinner .footinner1{
+				margin-right: 5px;
+				width: 24%;
+			}
+			.brandlogofoot{
+				margin-top: 10px;
+				font-size: 30px;
+			}
+			.brandfoot2{
+				font-size: 22px;
+			}	
+			.smallpart2{
+				font-size: 10px;
+			}
+			.footcona a{
+				font-size: 22px;
+			}
+
+		}
+		@media (max-width: 1000px){
+
+		  .maincon {
+		    height: 400px;
+		    width: 100%;
+		    margin: 0;
+		  }
+		  .maincon img{
+		    margin-right: 0;
+		    height: 42%;
+		    width: 24%;
+		  }
+			.navbottom{
+				margin-top: 150px;
+			}
+			.navbottom2 i{
+				font-size: 40px;
+			}
+			.navbottom2 svg{
+				width: 22%;
+				height: 40px;
+			}
+			.navbottom2 p{
+				font-size: 18px;
+			}
+
+			.brandlogo{
+				width: 5%;
+				margin-top: 3%;				
+			}
+			.footerpart{
+				height: 850px;
+			}
+			.footinner .footinner1{
+				width: 47%;
+			}
+			.con{
+				font-size: 20px;
+			}
+			.con2 input{
+				width: 250px;
+			}
+		}
+
+		@media (max-width: 720px){
+
+		  .maincon {
+		    height: 1000px;
+		    width: 100%;
+		    margin: 0;
+		  }
+		  .maincon img{
+		    margin-right: 0;
+		    height: 24.5%;
+		    width: 49.2%;
+		  }
+		  	.navbottom2{
+		  		padding-top: 40px;
+		  	}
+			.navbottom2 i{
+				width: 100%;
+				font-size: 50px;
+			}
+			.navbottom2 svg{
+				width: 100%;
+				height: 50px;
+			}
+			.navbottom2 p{
+				text-align: center;
+				width: 100%;
+				font-size: 15px;
+			}
+
+			.brandlogo{
+				font-size: 20px;
+				margin-right: 10px;
+			}
+			.brand{
+				height: 45px;
+				width: 70%;
+			}
+			.brand a{
+				font-size: 30px;
+			}
+			.navbottom{
+				margin-top: 110px;
+			}
+			.foottop{
+				top: 2em;
+				height: 150px;
+			}
+			.con{
+				font-size: 15px;
+			}
+			.con2 input{
+				width: 180px;
+			}
+
+		}
+
+		@media (max-width: 500px){
+
+		  .maincon {
+		    height: 800px;
+		    width: 100%;
+		    margin: 0;
+		  }
+		  .maincon img{
+		    margin-right: 0;
+		    height: 23%;
+		    width: 49.2%;
+		  }
+		  	.navbottom2{
+		  		padding-top: 30px;
+		  	}
+			.navbottom2 i{
+				width: 100%;
+				font-size: 35px;
+			}
+			.navbottom2 svg{
+				width: 100%;
+				height: 35px;
+			}
+			.navbottom2 p{
+				width: 100%;
+				font-size: 13px;
+			}
+
+			.brandlogo{
+				font-size: 16px;
+				margin-top: 5%;
+				margin-right: 20px;
+			}
+			.brand{
+				height: 45px;
+				width: 65%;
+			}
+			.brandlogofoot{
+				width: 15%;
+				font-size: 40px;	
+			}
+			.brandfoot2{
+				height: 35px;
+				margin-top: 5px;
+				font-size: 35px;
+			}
+			.smallpart2{
+				margin-top: 5px;
+				font-size: 15px;
+			}
+			.topcontent2{
+				font-size: 30px;
+				font-weight: 900;
+			}
+
+			.foottop{
+				top: 4.5em;
+				height: 110px;
+			}
+			.con{
+				font-size: 10px;
+			}
+			.con2 input{
+				height: 25px;
+				width: 130px;
+			}
+			.footerpart{
+				height: 1250px;
+			}
+			.footinner .footinner1{
+				margin-bottom: 25px;
+				width: 89%;
+			}
+			.footwidget{
+				width: 90%;
+			}
+		}
+		@media (max-width: 400px){
+			.openbtn{
+				font-size: 40px;
+			}
+			.brandlogo{
+				margin-right: 15px; 
+			}
+			.brand{
+				margin-left: 10px;
+				width: 60%;
+				height: 40px;
+			}
+			.brand a{
+				font-size: 24px;
+			}
+			.navbottom{
+				margin-top: 50px;
+			}
+		  	.navbottom2{
+		  		padding-top: 40px;
+		  	}
+			.navbottom2 i{
+				width: 100%;
+				font-size: 35px;
+			}
+			.navbottom2 svg{
+				width: 100%;
+				height: 35px;
+			}
+			.navbottom2 p{
+				display: none;
+				width: 100%;
+				font-size: 15px;
+			}
+
+		  .maincon {
+		    height: 700px;
+		    width: 100%;
+		    margin: 0;
+		  }
+		  .maincon img{
+		    margin-right: 0;
+		    height: 23%;
+		    width: 49.2%;
+		  }
+
+
+			.foottop{
+				height: 100px;
+			}
+			.con{
+				margin-top: 45px;
+			}
+			.footerpart{
+				height: 1450px;
+			}
+			.brandfoot{
+				margin-left: 5px;
+			}
+			.brandfoot2{
+				font-size: 30px;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<!-- navbar -->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+    <a href="">HOME</a>
+	<a href="#">PAGES</a>
+	<a href="#">EVENT</a>
+	<a href="#">SPEAKER</a>
+	<a href="#">PRICING</a>
+	<a href="#">GALLERY</a>
+	<a href="#">BLOG</a>
+	<a href="#">CONTACT</a>
+	<a href="#">SPONSOR</a>
+
+  </div>
+
+
+
+	<div class="topbar1">
+		<div class="topbar2">
+		  <div id="main">
+		    <button class="openbtn" onclick="openNav()">
+		    	<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+				  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+				</svg>
+		    </button>
+		  </div>
+				<div class="brandlogo">
+					<svg width="2em" viewBox="0 0 16 16" class="bi bi-bullseye" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					  <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+					  <path fill-rule="evenodd" d="M8 13A5 5 0 1 0 8 3a5 5 0 0 0 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
+					  <path fill-rule="evenodd" d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
+					  <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+					</svg>
+				</div>
+
+			<div class="brand">
+				<div style="display: inline-block;">
+					<a href="">EVENT TIME</a>
+				</div>
+			</div>
+			<div class="navcontent" id="myDIV">
+				<a href="#" class="item active">HOME</a>
+				<a href="#" class="item">PAGES</a>
+				<a href="#" class="item">EVENT</a>
+				<a href="#" class="item">SPEAKER</a>
+				<a href="#" class="item">PRICING</a>
+				<a href="#" class="item">GALLERY</a>
+				<a href="#" class="item">BLOG</a>
+				<a href="#" class="item">CONTACT</a>
+				<a href="#" class="item">SPONSOR</a>
+
+			</div>
+			<div class="smallpart">
+				<p>Event management</p>
+			</div>
+		<hr>
+		</div>
+
+		<div class="topcontent">
+			<p style="margin-top: 2em;margin-bottom: 1em;">December 31,2015 23:59pm</p>
+			<p class="topcontent2">FRONT END DEVELOPER CONFERENCE</p>
+
+			<form>
+				<input type="text" name="" placeholder=" Your name">
+				<input type="text" name="" placeholder=" Your email">		
+				<input type="text" name="" placeholder=" Your phone">
+			</form>
+			<br>
+			<div class="btnsgroup" id="myDIV2">
+				<a href="#" class="items active2">Register Now</a>
+				<a href="#" class="items">Watch Video</a>			
+			</div>
+		<br>
+			<div class="navbottom">
+				<div class="navbottom2">
+					<a href="">
+					<!-- <i class="fa fa-map-marker"></i> -->
+					<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					  <path fill-rule="evenodd" d="M12.166 8.94C12.696 7.867 13 6.862 13 6A5 5 0 0 0 3 6c0 .862.305 1.867.834 2.94.524 1.062 1.234 2.12 1.96 3.07A31.481 31.481 0 0 0 8 14.58l.208-.22a31.493 31.493 0 0 0 1.998-2.35c.726-.95 1.436-2.008 1.96-3.07zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+					  <path fill-rule="evenodd" d="M8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+					</svg>
+					<p>Austrlia</p>
+					</a>
+				</div>
+				<div class="navbottom2">
+					<a href="">
+						<i class="fa fa-group"></i>
+						<p>Sponsor</p>
+					</a>
+				</div>
+				<div class="navbottom2">
+					<a href="">
+						<!-- <i class="fa fa-microphone"></i> -->
+						<svg viewBox="0 0 16 16" class="bi bi-mic" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						  <path fill-rule="evenodd" d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+						  <path fill-rule="evenodd" d="M10 8V3a2 2 0 1 0-4 0v5a2 2 0 1 0 4 0zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"/>
+						</svg>
+						<p> 25+ Speaker</p>
+					</a>
+				</div>
+				<div class="navbottom2">
+					<a href="">
+						<i class="fa fa-coffee"></i>
+						<p>Some Coffee</p>
+					</a>
+				</div>
+
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- mainbody -->
+
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	  <ol class="carousel-indicators">
+	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+	    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+	    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+	  </ol>
+	  <div class="carousel-inner">
+	    <div>
+	      <div class="carousel-item active">
+	        <h1>OUR GALLERY</h1>
+	        <div class="innerdivcon">
+	          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+	        </div>
+
+	        <div class="maincon">
+	          <img src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+	          <img src="https://previews.123rf.com/images/imtmphoto/imtmphoto1605/imtmphoto160500001/56191049-young-asian-businessman-facilitating-a-group-discussion-or-training-in-office-.jpg">
+	          <img src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+	          <img src="https://previews.123rf.com/images/imtmphoto/imtmphoto1605/imtmphoto160500001/56191049-young-asian-businessman-facilitating-a-group-discussion-or-training-in-office-.jpg">
+	          <img src="https://previews.123rf.com/images/imtmphoto/imtmphoto1605/imtmphoto160500001/56191049-young-asian-businessman-facilitating-a-group-discussion-or-training-in-office-.jpg">
+	          <img src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+	          <img src="https://previews.123rf.com/images/imtmphoto/imtmphoto1605/imtmphoto160500001/56191049-young-asian-businessman-facilitating-a-group-discussion-or-training-in-office-.jpg">
+	          <img src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+	        </div>
+
+	      </div>
+	      <div class="carousel-item">
+	        <h1>OUR GALLERY</h1>
+	        <div class="innerdivcon">
+	          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	        </div>
+
+	        <div class="maincon">
+	          <img src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+	          <img src="https://previews.123rf.com/images/imtmphoto/imtmphoto1605/imtmphoto160500001/56191049-young-asian-businessman-facilitating-a-group-discussion-or-training-in-office-.jpg">
+	          <img src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+	          <img src="https://previews.123rf.com/images/imtmphoto/imtmphoto1605/imtmphoto160500001/56191049-young-asian-businessman-facilitating-a-group-discussion-or-training-in-office-.jpg">
+	          <img src="https://previews.123rf.com/images/imtmphoto/imtmphoto1605/imtmphoto160500001/56191049-young-asian-businessman-facilitating-a-group-discussion-or-training-in-office-.jpg">
+	          <img src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+	          <img src="https://previews.123rf.com/images/imtmphoto/imtmphoto1605/imtmphoto160500001/56191049-young-asian-businessman-facilitating-a-group-discussion-or-training-in-office-.jpg">
+	          <img src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+	        </div>
+
+	      </div>
+	      <div class="carousel-item">
+	        <h1>OUR GALLERY</h1>
+	        <div class="innerdivcon">
+	          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+	        </div>
+
+	        <div class="maincon">
+	          <img src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+	          <img src="https://previews.123rf.com/images/imtmphoto/imtmphoto1605/imtmphoto160500001/56191049-young-asian-businessman-facilitating-a-group-discussion-or-training-in-office-.jpg">
+	          <img src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+	          <img src="https://previews.123rf.com/images/imtmphoto/imtmphoto1605/imtmphoto160500001/56191049-young-asian-businessman-facilitating-a-group-discussion-or-training-in-office-.jpg">
+	          <img src="https://previews.123rf.com/images/imtmphoto/imtmphoto1605/imtmphoto160500001/56191049-young-asian-businessman-facilitating-a-group-discussion-or-training-in-office-.jpg">
+	          <img src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+	          <img src="https://previews.123rf.com/images/imtmphoto/imtmphoto1605/imtmphoto160500001/56191049-young-asian-businessman-facilitating-a-group-discussion-or-training-in-office-.jpg">
+	          <img src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+	        </div>
+
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+	<!-- footer -->
+
+<div style="position: relative;">
+	<div style="margin-top: 50px; height: 150px;">
+			<div class="foottop">
+				<div class="con">
+					<p><span style="color: black;">SUSCRIBE</span>OUR NEWS</p>
+				</div>
+				<div class="con2">
+					<div>
+						<input type="text" placeholder="Enter Email" name="">						
+					</div>
+				</div>
+			</div>
+
+	</div>
+	<div style="background-color: black;">
+		<div class="footerpart">
+			<div class="footinner">
+				<div class="footinner1">
+					<div class="brandlogofoot">
+						<svg width="1em" viewBox="0 0 16 16" class="bi bi-bullseye" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						  <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+						  <path fill-rule="evenodd" d="M8 13A5 5 0 1 0 8 3a5 5 0 0 0 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
+						  <path fill-rule="evenodd" d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
+						  <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+						</svg>
+					</div>
+					<div class="brandfoot foothead">
+						<a href="" class="brandfoot2">EVENT TIME</a>
+						<br>
+						<a href="" class="smallpart2">Event Management</a>
+					</div>
+
+					<br>
+
+					<div style="margin-top: 20px;text-align: left;" class="foothead">
+						<p>It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old</p>
+					</div>
+
+					<div style="margin-top: 20px;text-align: left;" class="foothead">
+						<p>It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old</p>
+					</div>
+
+					<div class="footcontent">
+						<a href=""><i class="fa fa-facebook" style="margin-left: 30px;"></i></a>
+						<a href=""><i class="fa fa-twitter" style="margin-left: 30px;"></i></a>
+						<a href=""><i class="fa fa-google" style="margin-left: 30px;"></i></a>
+						<a href=""><i class="fa fa-linkedin" style="margin-left: 30px;"></i></a>
+					</div>
+
+				</div>
+
+				<div class="footinner1">
+					<div  class="foothead footcona">
+						<a href="">QUICK LINKS</a>
+					</div>
+					<div class="footnext footcontent">
+						<a href="" style="margin-top: 10px;"><i class="fa fa-angle-right"></i> FAQS and FAQ</a>
+						<a href="" style="margin-top: 10px;"><i class="fa fa-angle-right"></i> Support and Support</a>
+						<a href="" style="margin-top: 10px;"><i class="fa fa-angle-right"></i> Sitemap and Sitemap</a>
+						<a href="" style="margin-top: 10px;"><i class="fa fa-angle-right"></i> Blog and Blog</a>
+						<a href="" style="margin-top: 10px;"><i class="fa fa-angle-right"></i> Community and Community</a>
+						<a href="" style="margin-top: 10px;"><i class="fa fa-angle-right"></i> Membership and Membership</a>
+						<a href="" style="margin-top: 10px;"><i class="fa fa-angle-right"></i> Event and Event</a>
+						<a href="" style="margin-top: 10px;"><i class="fa fa-angle-right"></i> Contact US and Contact US</a>
+
+					</div>
+				</div>
+				<div class="footinner1">
+					<div class="foothead footcona">
+						<a href="">TWITTER FEED</a>
+					</div>
+					<div class="footcontent" style="margin-top: 20px;">
+						<p>Wordpress 5.5 "Eckstine"
+						<a style="color: white;" href="">http://t.co/ gAmyaYAqz8</a>
+						about 3 weeks ago</p>
+					</div>
+					<div class="footcontent" style="margin-top: 20px;">
+						<p>Wordpress 5.5 "Eckstine"
+						<a style="color: white;" href="">http://t.co/ gAmyaYAqz8</a>
+						about 3 weeks ago</p>
+					</div>
+					<div class="footcontent" style="margin-top: 20px;">
+						<p>Wordpress 5.5 "Eckstine"
+						<a style="color: white;" href="">http://t.co/ gAmyaYAqz8</a>
+						about 3 weeks ago</p>
+					</div>
+				</div>
+				<div class="footinner1">
+					<div class="foothead footcona">
+						<a href="">FOOTER WIDGET</a>
+					</div>		
+					<div style="margin-top: 20px;">
+						<div class="footwidget">
+							<img style="width: 80px;height:60px;margin-bottom: 5px;" src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+							<img style="width: 80px;height:60px;margin-bottom: 5px;" src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+							<img style="width: 80px;height:60px;margin-bottom: 5px;" src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+							<img style="width: 80px;height:60px;margin-bottom: 5px;" src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+							<img style="width: 80px;height:60px;margin-bottom: 5px;" src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+							<img style="width: 80px;height:60px;margin-bottom: 5px;" src="https://i1.wp.com/www.pace2race.com/wp-content/uploads/2014/05/Group-Discussion.jpg?ssl=1">
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+				<div class="footcontent" style="text-align: center; width: 100%;background-color: #1f2736">
+					<hr style="margin-top: 0;">
+					<p style="color: #464c54;">2015 <span style="color: white;">EVENT TIME</span> ALL RIGHT RESERVED</p>
+					<hr style="margin-bottom: 0;">
+				</div>
+		</div>
+	</div>
+</div>
+<script>
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("item");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+var header = document.getElementById("myDIV2");
+var btns2 = header.getElementsByClassName("items");
+for (var i = 0; i < btns2.length; i++) {
+  btns2[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active2");
+  current[0].className = current[0].className.replace(" active2", "");
+  this.className += " active2";
+  });
+}
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
